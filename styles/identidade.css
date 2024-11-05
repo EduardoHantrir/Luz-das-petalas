@@ -1,7 +1,11 @@
+.content {
+    background-color: beige;
+    overflow-x: hidden;
+}
+ 
 .nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     background-color: #D9D9D9;
     position: fixed;
     top: 0;
@@ -9,32 +13,90 @@
     width: 100%;
     padding: 6px;
 }
-
+ 
+.navHead{
+    display: flex;
+    flex: 4;
+    justify-content: space-around;
+}
+ 
 .nav a {
     color: black;
     text-decoration: none;
     padding: 6px;
 }
-
+ 
 .loginCad {
     display: flex;
     justify-self: end;
     padding-left: 15px;
+    flex: 1
 }
-
+ 
 .loginCad a {
     margin-right: 18px;
 }
-
+ 
 .cadastro {
     background-color: aqua;
     border-radius: 7px;
 }
-
+ 
+.imagem{
+    text-align: center;
+}
+ 
 .banner {
-     margin-top: 45px;
-    width: 100%;
+    width: 95%;
     height: 460px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 16px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+ 
+.main {
+    display: flex;
+    background-color: aliceblue;
+    margin-inline: 5%;
+    flex-direction: column;
+}
+ 
+.menu {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+ 
+.menuButton{
+    display: flex;
+    text-align: center;
+    background-color: aquamarine;
+    padding: 10px;
+    padding-inline: 30px;
+    border-radius: 5px;
+    align-items: center;
+}
+ 
+.menu .icon {
+    margin-inline-end: 8px;
+    width: 20px;
+    height: 15px;
+    object-fit:fill;
+}
+
+.destaque{
+    width: 70%;
+    margin-inline: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: burlywood;
+}
+
+.destaque img {
+    height: 250px;
+    width: 250px;
 }
