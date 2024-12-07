@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/form.css">
+</head>
+
+<body>
+    <!-- Formulário de Login -->
+    <form class="formulario" id="formLogin">
+        <div class="campo">
+            <label for="loginEmail">E-mail:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+        </div>
+        <div class="campo">
+            <label for="loginSenha">Senha:</label>
+            <input type="password" id="loginSenha" name="loginSenha" required>
+        </div>
+        <div class="campo">
+            <input type="submit" value="Entrar">
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('formLogin').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const loginEmail = document.getElementById('loginEmail').value;
+            const loginSenha = document.getElementById('loginSenha').value;
+
+            // Recuperar os dados armazenados no Local Storage
+            const storedUserData = localStorage.getItem('userData');
+            if (storedUserData) {
+                const userData = JSON.parse(storedUserData);
+
+                // Verificar se as credenciais de login estão corretas
+                if (userData.email === loginEmail && userData.senha === loginSenha) {
+                    alert('Login bem-sucedido! Bem-vindo, ' + userData.nome + '!');
+                    // Redirecionar para uma página protegida ou área do usuário
+                    window.location.href = '../index.html';
+                } else {
+                    alert('E-mail ou senha incorretos. Tente novamente.');
+                }
+            } else {
+                alert('Nenhum usuário registrado encontrado.');
+            }
+        });
+    </script>
+</body>
+
+</html>

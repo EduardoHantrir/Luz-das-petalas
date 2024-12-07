@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.formulario {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="date"],
+.campo input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.campo-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.campo-inline label {
+    margin-right: 10px;
+}
+
+.campo-inline input {
+    margin-right: 5px;
+}
+
+.campo-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    flex-direction: row;
+}
+
+.campo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px 0 8px;
+    cursor: pointer;
+}
+
+.mostrar-senhas-label {
+    font-size: 0.8em; /* Fonte menor e discreta */
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: #004d40;
+}
+
+.botao-voltar{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 35px;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.botao-voltar img {
+    height: 100%;
+}
+
+.barra-progresso {
+    width: 100%;
+    max-width: 420px; /* Mesma largura do formulário */
+    background: #ccc;
+    border-radius: 10px;
+    height: 10px;
+    display: flex;
+}
+
+.progresso {
+    background: #00796b;
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Estilos para validação de senha */
+.mensagem-erro {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+input[type="password"].invalida {
+    border-color: red;
+}
+
+input[type="password"].valida {
+    border-color: green;
+}
+
+/* Estilos para os ícones de olho */
+.senha-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.senha-wrapper input {
+    flex: 1;
+    padding-right: 30px; /* Espaço para o ícone de olho */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #00796b;
+}
