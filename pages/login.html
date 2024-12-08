@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- Formulário de Login -->
     <form class="formulario" id="formLogin">
         <div class="campo">
             <label for="loginEmail">E-mail:</label>
@@ -31,15 +30,12 @@
             const loginEmail = document.getElementById('loginEmail').value;
             const loginSenha = document.getElementById('loginSenha').value;
 
-            // Recuperar os dados armazenados no Local Storage
             const storedUserData = localStorage.getItem('userData');
             if (storedUserData) {
                 const userData = JSON.parse(storedUserData);
 
-                // Verificar se as credenciais de login estão corretas
                 if (userData.email === loginEmail && userData.senha === loginSenha) {
                     alert('Login bem-sucedido! Bem-vindo, ' + userData.nome + '!');
-                    // Redirecionar para uma página protegida ou área do usuário
                     window.location.href = '../index.html';
                 } else {
                     alert('E-mail ou senha incorretos. Tente novamente.');

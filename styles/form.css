@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: aliceblue;
+    background-color: rgba(253, 231, 246, 0.438);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,8 @@ body {
 }
 
 .mostrar-senhas-label {
-    font-size: 0.8em; /* Fonte menor e discreta */
+    font-size: 0.8em;
+    /* Fonte menor e discreta */
     cursor: pointer;
 }
 
@@ -91,7 +92,7 @@ input[type="button"]:hover {
     background: #004d40;
 }
 
-.botao-voltar{
+.botao-voltar {
     border: none;
     background-color: rgba(0, 0, 0, 0.0);
     height: 35px;
@@ -105,7 +106,8 @@ input[type="button"]:hover {
 
 .barra-progresso {
     width: 100%;
-    max-width: 420px; /* Mesma largura do formulário */
+    max-width: 420px;
+    /* Mesma largura do formulário */
     background: #ccc;
     border-radius: 10px;
     height: 10px;
@@ -144,7 +146,8 @@ input[type="password"].valida {
 
 .senha-wrapper input {
     flex: 1;
-    padding-right: 30px; /* Espaço para o ícone de olho */
+    padding-right: 30px;
+    /* Espaço para o ícone de olho */
 }
 
 .toggle-password {
