@@ -8,13 +8,10 @@
     <link rel="icon" href="./scr/img/Icone.png" type="image/x-icon" />
 </head>
 <body>
-    <!-- Formulário -->
     <form class="formulario" id="formCadastro">
-        <!-- Botão de Voltar no Topo -->
         <button type="button" id="botaoVoltar" class="botao-voltar" style="display: none;"><img
                 src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="voltar"></button>
 
-        <!-- Etapa 1: Informações do Usuário -->
         <div id="etapa1" class="etapa">
             <div class="campo">
                 <label for="nome">Nome completo:</label>
@@ -42,7 +39,6 @@
             </div>
         </div>
 
-        <!-- Etapa 2: Validação do CEP -->
         <div id="etapa2" class="etapa" style="display: none;">
             <div class="campo">
                 <label for="cep">Digite seu CEP:</label>
@@ -74,7 +70,6 @@
         </div>
     </form>
 
-    <!-- Barra de Progresso -->
     <div class="barra-progresso" id="barraProgresso">
         <div class="progresso" id="progresso"></div>
     </div>
@@ -178,7 +173,6 @@
             event.preventDefault();
 
             if (await validarCEP()) {
-                // Obter dados do formulário
                 const formData = {
                     nome: document.getElementById('nome').value,
                     email: document.getElementById('email').value,
@@ -191,10 +185,8 @@
                     estado: document.getElementById('estado').value
                 };
 
-                // Converter os dados do formulário em JSON
                 const formDataJSON = JSON.stringify(formData);
 
-                // Salvar os dados no Local Storage
                 localStorage.setItem('userData', formDataJSON);
 
                 alert('Usuario Cadastrado');

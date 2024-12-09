@@ -72,7 +72,6 @@ body {
 
 .mostrar-senhas-label {
     font-size: 0.8em;
-    /* Fonte menor e discreta */
     cursor: pointer;
 }
 
@@ -107,7 +106,6 @@ input[type="button"]:hover {
 .barra-progresso {
     width: 100%;
     max-width: 420px;
-    /* Mesma largura do formulário */
     background: #ccc;
     border-radius: 10px;
     height: 10px;
@@ -122,7 +120,6 @@ input[type="button"]:hover {
     transition: width 0.3s ease;
 }
 
-/* Estilos para validação de senha */
 .mensagem-erro {
     color: red;
     font-size: 0.9em;
@@ -137,7 +134,6 @@ input[type="password"].valida {
     border-color: green;
 }
 
-/* Estilos para os ícones de olho */
 .senha-wrapper {
     position: relative;
     display: flex;
@@ -147,7 +143,6 @@ input[type="password"].valida {
 .senha-wrapper input {
     flex: 1;
     padding-right: 30px;
-    /* Espaço para o ícone de olho */
 }
 
 .toggle-password {
