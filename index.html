@@ -613,26 +613,16 @@
             </div>
         </footer>
         <script>
-            // Função para ocultar a tela de carregamento e mostrar o conteúdo principal 
             function hideLoadingScreen() {
                 document.getElementById('loading-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
             }
-            // Oculta a tela de carregamento após 0,5 segundos 
-            window.addEventListener('load', function () {
-                setTimeout(hideLoadingScreen, 500); // 500 milissegundos = 0,5 segundos
-            });
-
+            window.addEventListener('load', () => { setTimeout(hideLoadingScreen, 500); });
             document.querySelectorAll('.item').forEach(item => {
-                item.addEventListener('mouseenter', () => {
-                    item.style.backgroundColor = '#fecaa8';
-                });
-                item.addEventListener('mouseleave', () => {
-                    item.style.backgroundColor = 'white';
-                });
+                item.addEventListener('mouseenter', () => item.style.backgroundColor = '#fecaa8');
+                item.addEventListener('mouseleave', () => item.style.backgroundColor = 'white');
             }); 
         </script>
-
 </body>
 
 </html>
